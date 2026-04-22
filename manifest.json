@@ -1,13 +1,13 @@
 {
     "manifest_version":3,
     "name":"Ai Summary For Article ",
-    "version":1.0,
+    "version":"1.0",
 
     "permissions":["scripting","activeTab","storage"],
     "action":{
         "default_popup":"popup.html",
         "default_icon":"icon.png"
-    }
+    },
 
     "content_scripts":[
         {
