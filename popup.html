@@ -1,20 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ai Summarizer </title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Summarizer</title>
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        width: 300px;
+        font-family: 'Segoe UI', Tahoma, sans-serif;
+        background: #f4f6f8;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    h2 {
+        text-align: center;
+        margin-bottom: 15px;
+        color: #333;
+    }
+
+    select {
+        width: 100%;
+        padding: 8px;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+        margin-bottom: 10px;
+        font-size: 14px;
+        outline: none;
+    }
+
+    select:focus {
+        border-color: #4CAF50;
+    }
+
+    .btn-group {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 10px;
+    }
+
+    button {
+        flex: 1;
+        padding: 8px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-weight: 500;
+        transition: 0.3s;
+    }
+
+    #summarize {
+        background: #4CAF50;
+        color: white;
+    }
+
+    #summarize:hover {
+        background: #45a049;
+    }
+
+    #copy-btn {
+        background: #2196F3;
+        color: white;
+    }
+
+    #copy-btn:hover {
+        background: #1e88e5;
+    }
+
+    pre {
+        background: #fff;
+        padding: 10px;
+        border-radius: 6px;
+        border: 1px solid #ddd;
+        max-height: 150px;
+        overflow-y: auto;
+        font-size: 13px;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+    }
+
+    .footer {
+        text-align: center;
+        font-size: 12px;
+        margin-top: 8px;
+        color: #888;
+    }
+</style>
 </head>
-<body
-style="min-width: 200px; padding: 10px; font-family: sans-serif;">
-    <select name="" id="summary-type">
-        <option value="breif">Brief</option>
-        <option value="detailed">Detailed</option>
-        <option value="bullet">Bullet Points</option>
-    </select>
-    <button id="summarize">Summarize</button>
-    <button id="copy-btn">Copy</button>
-    <pre id="result">Select a Type and Click summarize</pre>
+
+<body>
+    <div class="container">
+        <h2> AI Summarizer</h2>
+
+        <select id="summary-type">
+            <option value="brief">Brief</option>
+            <option value="detailed">Detailed</option>
+            <option value="bullet">Bullet Points</option>
+        </select>
+
+        <div class="btn-group">
+            <button id="summarize">Summarize</button>
+            <button id="copy-btn">Copy</button>
+        </div>
+
+        <pre id="result">Select a type and click summarize...</pre>
+
+        <div class="footer">Made for Chrome Extension </div>
+    </div>
+
     <script src="popup.js"></script>
 </body>
 </html>
